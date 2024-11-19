@@ -6,6 +6,13 @@ __pycache__/
 # C extensions
 *.so
 
+# Mine
+data
+static
+templates
+prompt.py
+lab.ipynb
+
 # Distribution / packaging
 .Python
 build/
