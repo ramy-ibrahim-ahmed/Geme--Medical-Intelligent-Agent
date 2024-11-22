@@ -52,3 +52,13 @@ async def chat(query: Query):
             content={"answer": f"An error occurred: {str(e)}"},
             status_code=500,
         )
+
+
+@app.get("/about", response_class=HTMLResponse)
+async def about_page(request: Request):
+    return templates.TemplateResponse("about.html", {"request": request})
+
+
+@app.get("/contact", response_class=HTMLResponse)
+async def contact_page(request: Request):
+    return templates.TemplateResponse("contact.html", {"request": request})
