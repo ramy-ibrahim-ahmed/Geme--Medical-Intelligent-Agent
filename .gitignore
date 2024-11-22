@@ -12,6 +12,7 @@ static
 templates
 prompt.py
 lab.ipynb
+*.mp4
 
 # Distribution / packaging
 .Python
