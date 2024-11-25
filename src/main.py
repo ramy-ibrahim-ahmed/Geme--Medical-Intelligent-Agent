@@ -39,7 +39,7 @@ templates = Jinja2Templates(directory="src/templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def serve_frontend(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("geme.html", {"request": request})
 
 
 @app.post("/chat")
