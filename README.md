@@ -5,6 +5,8 @@ My goal is to provide reliable and accurate medical information to assist you in
 
 ![Geme](Geme.gif)
 
+*This chatbot is for informational purposes only and is not a substitute for professional medical advice.*
+
 ## 🤖ChatBot
 
 Retrival augmented generation techinques to leravage a closed domain chatbot.
@@ -22,5 +24,3 @@ Retrival augmented generation techinques to leravage a closed domain chatbot.
 ## 🖼️GUI
 
 My design for the user interface with HTML, CSS and JavaScript.
-
-**This chatbot is for informational purposes only and is not a substitute for professional medical advice.**
