@@ -23,4 +23,4 @@ Retrival augmented generation techinques to leravage a closed domain chatbot.
 
 ## 🖼️GUI
 
-My design for the user interface with HTML, CSS and JavaScript.
+I designed the user interface with my taste in art🧑🏼‍🎨.
