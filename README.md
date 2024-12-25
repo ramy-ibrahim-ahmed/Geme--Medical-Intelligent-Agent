@@ -1,13 +1,15 @@
-# 😎Geme
+# ✨Geme
 
 Welcome to Geme👋🏽, your trusted medical chatbot.
-My goal is to provide reliable and accurate medical information to assist you in understanding health concepts🤓.
+My goal is to provide reliable and accurate medical information to assist you in understanding health concepts.
 
-![Geme](Geme.gif)
+![Geme](Geme.jpg)
 
 *This chatbot is for informational purposes only and is not a substitute for professional medical advice.*
 
-## 🤖ChatBot
+---
+
+## Closed-Domain ChatBot
 
 Retrival augmented generation techinques to leravage a closed domain chatbot.
 
@@ -16,11 +18,17 @@ Retrival augmented generation techinques to leravage a closed domain chatbot.
 - **Embedding model** nomic-embed-text with 768 dimensions.
 - **Data** book in medicen *Gale Research Company._Longe, Jacqueline L._Blanchfield, Deirdre.*
 
-## 🚀Software
+*Here we will ask Gemini an outside-domain question to test her trustneth.*
+
+![Geme](closed-domain.jpg)
+
+---
+
+## Software Development
+
+Seperation of concerns design pattern with modular architecture to separate business logic, data access, and presentation layers, reducing coupling and enhancing maintainability.
 
 - **FastAPI** for RESTAPIs with asynchurounios approach.
 - **Pydantic** for request response validation.
 
-## 🖼️GUI
-
-I designed the user interface with my taste in art🧑🏼‍🎨.
+I designed the user interface with my taste in art with Html, CSS and vanella Javascript.
