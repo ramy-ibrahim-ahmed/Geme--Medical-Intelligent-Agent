@@ -18,7 +18,7 @@ Retrival augmented generation techinques to leravage a closed domain chatbot.
 - **Embedding model** nomic-embed-text with 768 dimensions.
 - **Data** book in medicen *Gale Research Company._Longe, Jacqueline L._Blanchfield, Deirdre.*
 
-*Here we will ask Gemini an outside-domain question to test her trustneth.*
+*Here we will ask Geme an outside-domain question to test her trustneth.*
 
 ![Geme](closed-domain.jpg)
 
