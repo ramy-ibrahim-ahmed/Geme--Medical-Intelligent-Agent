@@ -1,6 +1,6 @@
-# ✨Geme
+# 🦒Giraffe
 
-Welcome to Geme👋🏽, your trusted medical chatbot.
+Welcome to Giraffe👋🏽, your trusted medical chatbot.
 My goal is to provide reliable and accurate medical information to assist you in understanding health concepts.
 
 ![Geme](Geme.jpg)
