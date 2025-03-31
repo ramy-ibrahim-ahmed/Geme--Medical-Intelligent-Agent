@@ -13,6 +13,9 @@ templates
 prompt.py
 lab.ipynb
 *.mp4
+v1/
+src/
+*.py
 
 # Distribution / packaging
 .Python

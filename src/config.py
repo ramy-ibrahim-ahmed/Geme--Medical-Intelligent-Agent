@@ -12,10 +12,19 @@ class Settings(BaseSettings):
     EMBEDDING_MODEL: str
     EMBEDDING_SIZE: int
 
+    COHERE_API_KEY: str
+    RERANKER_MODEL: str
+    NUM_RERANKED: int
+
     LLM: str
     MAX_TOKENS_OUTPUT: int
     TEMPERATURE: float
     TOP_K: int
+
+    OLLAMA_URL: str
+    VISION_MODEL: str
+
+    TAVILY_API_KEY: str
 
     class Config:
         env_file = r".env"

@@ -1,9 +1,14 @@
-from fastapi import FastAPI, Request
+import os
+import tempfile
+
+from fastapi import FastAPI, Request, UploadFile, File, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse, JSONResponse
-from .schema import Query
-from .bot import answer
+from langchain_core.messages import HumanMessage
+
+from .bot.agent import get_geme
+from .bot.state import State
 
 app = FastAPI(
     title="Medical--Bot🩺",
@@ -33,7 +38,6 @@ app = FastAPI(
 )
 
 app.mount("/static", StaticFiles(directory="src/static"), name="static")
-
 templates = Jinja2Templates(directory="src/templates")
 
 
@@ -43,14 +47,41 @@ async def serve_frontend(request: Request):
 
 
 @app.post("/chat")
-async def chat(query: Query):
+async def chat(
+    query: str = Form(...),
+    user_id: str = Form("1"),
+    image: UploadFile = File(None),
+):
     try:
-        result = answer(query=query.query)
-        return JSONResponse(content={"answer": result})
+        config = {"configurable": {"thread_id": user_id}}
+        human_message = HumanMessage(content=query.strip())
+        GEME = get_geme()
+
+        if image:
+            print("__ocr__")
+            image_bytes = await image.read()
+            suffix = os.path.splitext(image.filename)[1] if image.filename else ".png"
+            with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp_file:
+                tmp_file.write(image_bytes)
+                tmp_file.flush()
+                image_path = tmp_file.name
+
+            res: State = GEME.invoke(
+                {"messages": human_message, "image": image_path}, config=config
+            )
+
+            os.remove(image_path)
+        else:
+            print("__general__")
+            res: State = GEME.invoke({"messages": human_message}, config=config)
+
+        answer = res["messages"][-1].content
+        return JSONResponse(content={"answer": answer})
+
     except Exception as e:
         return JSONResponse(
             content={"answer": f"An error occurred: {str(e)}"},
-            status_code=500,
+            status_code=400,
         )
 
 
