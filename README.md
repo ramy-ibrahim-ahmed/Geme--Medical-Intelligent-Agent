@@ -4,13 +4,13 @@
 
 Geme is an agent designed to help people with medical information and tasks. She can process images, perform web searches, and read books to identify and address user needs. My goal is to bridge the gaps found in open-source LLMs like quen2.5:7b, gemma3:4b, and gemma3:12b by reducing reliance on the REACT design pattern and the requirement for the LLM to be the sole engine for handling conditions. Instead, I have incorporated logical routers and one-shot semantic classification.
 
-<!-- <iframe 
+<iframe 
     width="600" 
     height="340" 
     src="https://www.youtube.com/watch?v=N9FvUrZo66M&list=RDN9FvUrZo66M&start_radio=1" 
     frameborder="0" 
     allowfullscreen>
-</iframe> -->
+</iframe>
 
 ## Tools
 
@@ -48,23 +48,22 @@ Geme is an agent designed to help people with medical information and tasks. She
 | Search        | Formatted search results retrieved from the Tavily search tool. |
 
 ## Workflow
-
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <img src="read.png" style="max-height: 300px; width: auto;" />
-    <img src="search.png" style="max-height: 300px; width: auto;" />
-    <img src="workflow.gif" style="max-height: 300px; width: auto;" />
-</div>
+    
+<img src="workflow.png" style="max-height: 400px; width: auto;" />
 
 ### 1. Router
 
 * Image Input: If the input is an image, the router immediately routes it to the **OCR**.
 * Textual Input: If the input is text, the LLM performs a one-shot semantic classification on the user query.
-    * **RAG**: If the LLM identifies the query as requiring information from a medical book.
+    * **Read**: If the LLM identifies the query as requiring information from a medical book.
     * **Chatbot**: If the LLM determines that the query is a general conversation.
 
 ---
 
+<img src="search.png" style="max-height: 400px; width: auto;" />
+
 ### 2. OCR
+
 
 * This node uses *Gemma3:4b* with its vision capabilities and a text extraction prompt to extract the text from the image.
 * The extracted text is placed into the state key *transcription*.
@@ -84,6 +83,8 @@ Geme is an agent designed to help people with medical information and tasks. She
 * If the search results do not provide a relevant answer, Geme politely states that it cannot answer.
 
 ---
+
+<img src="read.png" style="max-height: 400px; width: auto;" />
 
 ### 2. RAG
 
