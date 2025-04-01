@@ -54,7 +54,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 ---
 
-<img src="search.png" style="max-height: auto; width: 600px;" />
+<img src="search.png" style="max-height: auto; width: 800px;" />
 
 ### 2. OCR
 
