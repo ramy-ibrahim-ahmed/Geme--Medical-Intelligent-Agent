@@ -43,7 +43,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 ## Workflow
     
-<img src="workflow.png" style="max-height: auto; width: 800px;" />
+<img src="workflow.png" style="max-height: auto; width: 600px;" />
 
 ### 1. Router
 
@@ -54,7 +54,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 ---
 
-<img src="search.png" style="max-height: auto; width: 800px;" />
+<img src="search.png" style="max-height: auto; width: 600px;" />
 
 ### 2. OCR
 
@@ -78,7 +78,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 ---
 
-<img src="read.png" style="max-height: auto; width: 800px;" />
+<img src="read.png" style="max-height: auto; width: 600px;" />
 
 ### 2. RAG
 
