@@ -4,7 +4,7 @@
 
 Geme is an agent designed to help people with medical information and tasks. She can process images, perform web searches, and read books to identify and address user needs. My goal is to bridge the gaps found in open-source LLMs like quen2.5:7b, gemma3:4b, and gemma3:12b by reducing reliance on the REACT design pattern and the requirement for the LLM to be the sole engine for handling conditions. Instead, I have incorporated logical routers and one-shot semantic classification.
 
-<img src="trial.png" style="max-height: 300px; width: auto;" />
+<img src="trial.png" style="max-height: 200px; width: auto;" />
 
 ## Tools
 
@@ -43,7 +43,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 ## Workflow
     
-<img src="workflow.png" style="max-height: 300px; width: auto;" />
+<img src="workflow.png" style="max-height: 200px; width: auto;" />
 
 ### 1. Router
 
@@ -54,7 +54,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 ---
 
-<img src="search.png" style="max-height: 300px; width: auto;" />
+<img src="search.png" style="max-height: 200px; width: auto;" />
 
 ### 2. OCR
 
@@ -78,7 +78,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 ---
 
-<img src="read.png" style="max-height: 300px; width: auto;" />
+<img src="read.png" style="max-height: 200px; width: auto;" />
 
 ### 2. RAG
 
