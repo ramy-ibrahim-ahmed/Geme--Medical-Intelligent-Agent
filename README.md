@@ -12,7 +12,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 | :--------- | :-------------------------- | :---------------------------------------------------------------------- |
 | OCR        | Gemma3:4b                   | Extracts text from images using vision prompts.                         |
 | Search     | Tavily search tool          | Retrieves three relevant web search results based on the query.         |
-| RAG        | Pinecone / nomic-embed-text | Retrieves relevant, pre-chunked document segments by cosine similarity. |
+| RAG        | Pinecone-nomic-embed-text   | Retrieves relevant, pre-chunked document by cosine similarity.          |
 | Reranker   | Cohere rerank-v3.5          | Ranks document chunks to select the top five most relevant.             |
 | Classifier | Qwen2.5:7b                  | Semanticlly classify question into general or need retriever.           |
 | Chatbot    | Gemma3:12b                  | Engages users with a friendly and closed-domain persona.                |
