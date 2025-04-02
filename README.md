@@ -43,7 +43,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 ## Workflow
     
-<img src="workflow.png" style="max-height: auto; width: 600px;" />
+<img src="workflow.gif" style="max-height: auto; width: 600px;" />
 
 ### 1. Router
 
