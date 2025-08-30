@@ -14,6 +14,7 @@ prompt.py
 lab.ipynb
 *.mp4
 
+
 # Distribution / packaging
 .Python
 build/

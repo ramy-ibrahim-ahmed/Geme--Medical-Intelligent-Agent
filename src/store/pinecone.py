@@ -7,7 +7,7 @@ from langchain_pinecone import Pinecone
 from langchain.schema import Document
 from langchain_ollama import OllamaEmbeddings
 
-from .config import get_settings
+from ..config import get_settings
 
 settings = get_settings()
 
