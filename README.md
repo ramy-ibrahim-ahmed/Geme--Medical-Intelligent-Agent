@@ -45,7 +45,7 @@ Geme is an agent designed to help people with medical information and tasks. She
     
 <img src="workflow.gif" style="max-height: auto; width: 600px;" />
 
-### 1. Router
+### Router
 
 * Image Input: If the input is an image, the router immediately routes it to the **OCR**.
 * Textual Input: If the input is text, the LLM performs a one-shot semantic classification on the user query.
@@ -56,7 +56,7 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 <img src="search.png" style="max-height: auto; width: 800px;" />
 
-### 2. OCR
+### OCR
 
 
 * This node uses *Gemma3:4b* with its vision capabilities and a text extraction prompt to extract the text from the image.
@@ -64,13 +64,13 @@ Geme is an agent designed to help people with medical information and tasks. She
 * The image path is removed from the state key *image* for subsequent invocations when chatting history is involved.
 * Image is removed from the temporary directory.
 
-### 3. Web Search
+### Web Search
 
 * *Qwen2.5:7b* creates a search query from the text extracted by OCR and the original user question.
 * Tavily search is used to obtain three search results, which are then formatted clearly, including links and documents.
 * These results are placed into the state key *search*.
 
-### 4. Chatbot
+### Chatbot
 
 * The *Gemma3:12b* is prompted with *persona*, *return format*, and *chatting with search results* as a system message.
 * Tool message includes the state key *search*.
@@ -80,22 +80,16 @@ Geme is an agent designed to help people with medical information and tasks. She
 
 <img src="read.png" style="max-height: auto; width: 600px;" />
 
-### 2. RAG
+### RAG
 
 * The *Qwen2.5:7b* generates five different queries that are semantically similar to the user's question and uses them to search for five documents per query.
 * The search is conducted in *Pinecone* indexing using the *nomic-embed-text* embedding model with cosine similarity as the metric and duplicate chunks are removed.
 * The *rerank-v3.5* reranker model is used to select the five most relevant documents from the remaining documents.
 * These documents are formatted in descending order of relevance and stored in the state key *context*.
 
-### 3. Chatbot
+### Chatbot
 
 * The *Gemma3:12b* is prompted with *persona*, *return format*, and *chatting with RAG* as a system message.
 * Tool message includes the state key *context*.
 * If the context does not provide a relevant answer, Geme politely states that it cannot answer.
 
----
-
-### 2. Chatbot
-
-* The *Gemma3:12b* is prompted with *persona*, *return format*, and *Chatting General* as a system message to respond to general conversations and chat history.
-* It maintains a closed domain focused on medicine.
