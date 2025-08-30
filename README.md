@@ -70,12 +70,6 @@ Geme is an agent designed to help people with medical information and tasks. She
 * Tavily search is used to obtain three search results, which are then formatted clearly, including links and documents.
 * These results are placed into the state key *search*.
 
-### Chatbot
-
-* The *Gemma3:12b* is prompted with *persona*, *return format*, and *chatting with search results* as a system message.
-* Tool message includes the state key *search*.
-* If the search results do not provide a relevant answer, Geme politely states that it cannot answer.
-
 ---
 
 <img src="read.png" style="max-height: auto; width: 600px;" />
